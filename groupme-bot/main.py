@@ -5,7 +5,7 @@ from os.path import dirname
 import requests
 from flask import Flask, request
 
-from spider import Spider
+from .spider import Spider
 
 app = Flask(__name__)
 
