@@ -22,12 +22,9 @@ class Spider():
                 yield result.get("href")
 
     def collect(self, sentence):
-        cntr = 0
         results = []
         for result_link in self.result_links(sentence):
-            if cntr == 3:
-                break
             results.append(self.search_engine_url + result_link)
-            cntr += 1
+            break
 
         return results

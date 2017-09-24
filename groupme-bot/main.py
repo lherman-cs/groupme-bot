@@ -20,7 +20,7 @@ def reply(name, text):
 
     results = SPIDER.collect(text)
     if results:
-        text = "Hey {}, check out these links:\n".format(
+        text = "Hey {}, check out this one!\n".format(
             name) + "\n".join(results)
     else:
         text = "I'm sorry {}, I couldn't find what you're looking for."
@@ -54,3 +54,6 @@ def callback():
             if command == "search":
                 reply(name, sentence)
 
+                return '', 200
+
+    return '', 404
